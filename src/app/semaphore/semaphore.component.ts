@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./semaphore.component.css']
 })
 export class SemaphoreComponent implements OnInit {
-  @Input() on = false;
+  @Input() on = true;
   constructor() { }
 
   ngOnInit(): void {

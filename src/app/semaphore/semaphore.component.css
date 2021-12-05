@@ -1,9 +1,9 @@
 .on {
- top: 47px;
+ top: 15%;
 }
 
 .off {
- top: 128px;
+ top: 47%;
 }
 
 .circle {
@@ -12,10 +12,14 @@
   background-color: black;
   border-radius: 50%;
   z-index: 1;
+  left: 70px;
   position: absolute;
-  left: 79px;
 }
 
 .semaphore {
   z-index: 0;
+}
+
+.content {
+  position: relative;
 }
