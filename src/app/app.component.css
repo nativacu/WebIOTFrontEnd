@@ -1,0 +1,7 @@
+.content {
+  display: flex;
+}
+
+.traffic-light {
+  justify-items: flex-end;
+}
