@@ -2,10 +2,32 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {CognitoIdentityCredentials} from "aws-sdk/lib/credentials/cognito_identity_credentials";
+
 export const environment = {
   production: false
 };
 
+export class AWSConfig {
+  region: string;
+  credentials: CognitoIdentityCredentials;
+
+  constructor() {
+    this.region = '';
+    this.credentials = new CognitoIdentityCredentials();
+  }
+
+}
+
+export class AWSExport {
+  config: AWSConfig;
+
+  constructor() {
+    this.config = new AWSConfig();
+  }
+}
+
+export const AWS: AWSExport = new AWSExport();
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
